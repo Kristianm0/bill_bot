@@ -34,9 +34,15 @@ from selenium.common.exceptions import TimeoutException
 import time  # Pausas entre acciones
 import urllib.parse  # Modifica URLs sin errores
 
-## -> Parte 3: Que es Github, comandos básicos de github
-git_init = "Crea un nuevo libro/repositorio"
+## -> Parte 3: Que es Github, comandos básicos de github (Hechos en consola)
 
+# -> 3.1 Subir a un proyecto a Github
+
+git_init = "Crea un nuevo libro/repositorio"
+git_add = "Marca los hechizos/páginas que quieres guardar"
+git_commit = "Guarda cambios de hechizos/código"
+git_remote_add_origin = "Conecta tu grimorio a una biblioteca remota"
+git_push = "Envía tu grimorio a la biblioteca para que otros magos lo vean"
 
 
 
