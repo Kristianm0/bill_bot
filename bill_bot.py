@@ -52,7 +52,7 @@ git_remote_add_origin = "Conecta tu grimorio a una biblioteca remota"
 git_push = "Envía tu grimorio a la biblioteca para que otros magos lo vean"
 
 #📌
-# -> 4: 
+# -> 4: Configuracion Navegador 🍕
 
 
 
