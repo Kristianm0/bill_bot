@@ -35,11 +35,8 @@ import time  # Pausas entre acciones
 import urllib.parse  # Modifica URLs sin errores
 
 ## -> Parte 3: Que es Github, comandos básicos de github
+git_init = "Crea un nuevo libro/repositorio"
 
-
-
-
-hola = "hola"
 
 
 
