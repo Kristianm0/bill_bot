@@ -41,15 +41,7 @@ import urllib.parse  # Modifica URLs sin errores
 #📌
 # -> 4: Configuracion Navegador 🍕
 #Funcion 
-def portal_dimensional():
-    """Abre un portal interdimensional (Navegador)"""
-    opciones = Options()
-    opciones.add_argument("--window-size=400,800")
-    opciones.add_argument("--disable-notifications")
-    #Invocamos al sirviente ChromeDriver que maneja el navegador
-    servicio = Service(ChromeDriverManager().install())
-    #Abrimos portal (navegador)
-    return webdriver.Chrome(service=servicio, options=opciones)
+
 
 #4.1 Fusionar Dimensiones (Merge a main)
 
