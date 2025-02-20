@@ -6,9 +6,11 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 🟢 Guía en la descripción 🟢  
 """
 """Parte 4.1: ¿Como Fusionar Dimensiones o ramas (Git Merge a main)?
-- git status → Muestra en qué rama estás y qué cambios hay.
-- git checkout main → Cambia a la rama principal.
-- git merge "Nombre_de_rama" → Fusiona los cambios de "Nombre_de_rama" en main.
+- git status → Muestra en qué rama (dimension) estás y qué cambios hay.
+- git add . -> Añde cambios de dimension de modificaciones 
+- git commit -m "Descripcion" -> de cambios
+- git checkout main → Cambia a la rama principal, dimension original
+- git merge "Nombre_de_rama" → Fusiona los cambios de "Nombre_de_rama" en main, une dimension de modificaciones a dimension original
 - git branch -d "Nombre_de_rama" → Borra la rama que hicistes (nombre_de_rama) si ya fue fusionada. (opcional)
 
 """
