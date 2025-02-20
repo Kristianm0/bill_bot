@@ -5,22 +5,12 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 
 🟢 Guía en la descripción 🟢  
 """
-"""Parte 3.2: ¿Como crear Ramas en Github para modificaciones?
-Vamos a crear una nueva rama en GitHub usando VS Code, como si estuvieras dividiendo la realidad en dimensiones alternativas, para no romper la realidad donde estamos o el codigo original.
-"""
-"""Pasos: 
-1. git status -> Muestra en qué realidad o codigo estás, chequeando el estado de tus cambios.
+"""Parte 4.1: ¿Como Fusionar Dimensiones o ramas (Git Merge a main)?
+- git status → Muestra en qué rama estás y qué cambios hay.
+- git checkout main → Cambia a la rama principal.
+- git merge "Nombre_de_rama" → Fusiona los cambios de "Nombre_de_rama" en main.
+- git branch -d "Nombre_de_rama" → Borra la rama que hicistes (nombre_de_rama) si ya fue fusionada. (opcional)
 
-2. git checkout -b "nombre_rama" -> Abre un portal a una nueva rama o version del codigo, es como crear una nueva dimensión.
-
-3. (Realiza cambios y guarda los archivos)
-Bill edita la realidad (código) y guarda sus hechizos.
-
-4. git add . -> Recolecta los ingredientes mágicos para el hechizo o los cambios del codigo.
-
-5. git commit -m "Descripción de los cambios realizados" -> Guarda el hechizo o codigo en el libro de github con una nota descriptiva.
-
-6. git push origin "nombre_rama" -> Envía el hechizo al repositorio mágico (GitHub) para que otros lo vean.
 """
 
 ## -> Parte 2: Automatización de WhatsApp con Selenium ##->
@@ -44,16 +34,20 @@ import urllib.parse  # Modifica URLs sin errores
 
 ## -> Parte 3: Que es Github, comandos básicos de github (Hechos en consola)
 
-# -> 3.1 Subir a un proyecto a Github
-git_init = "Crea un nuevo libro/repositorio"
-git_add = "Marca los hechizos/páginas que quieres guardar"
-git_commit = "Guarda cambios de hechizos/código"
-git_remote_add_origin = "Conecta tu grimorio a una biblioteca remota"
-git_push = "Envía tu grimorio a la biblioteca para que otros magos lo vean"
+# -> 3.1 Subir a un proyecto a Github (Hechos en consola)
 
 #📌
 # -> 4: Configuracion Navegador 🍕
+#Funcion 
+def portal_dimensional():
+    """Abre un portal interdimensional (Navegador)"""
+    opciones = Options()
+    opciones.add_argument("--window-size=400,800")
+    opciones.add_argument("--disable-notifications")
+    #Invocamos al sirviente ChromeDriver que maneja el navegador
+    servicio = Service(ChromeDriverManager().install())
+    #Abrimos portal (navegador)
+    return webdriver.Chrome(service=servicio, options=opciones)
 
-
-
+#4.1 Fusionar Dimensiones (Merge a main)
 
