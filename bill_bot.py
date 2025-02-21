@@ -56,3 +56,4 @@ import urllib.parse  # Modifica URLs sin errores
 
 
 #Archivo main sin funcion
+
