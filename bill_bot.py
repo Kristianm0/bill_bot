@@ -62,17 +62,7 @@ def portal_dimensional():
 
     # 🔥 Finalmente, abrimos el portal (el navegador) con las configuraciones establecidas
     return webdriver.Chrome(service=servicio, options=opciones)  
-    
-  ##Codigo opcional de prueba##
-#Ej: Llamada funcion
-navegador = portal_dimensional()
-#Le damos una pagina
-navegador.get("https://www.youtube.com/results?search_query=kristian+martinez+colina")
-
-#Guia de usuario
-input("Presiona Enter para cerrar el navegador...")  
-#Cerramos el navegador
-navegador.quit()
+  
 
 
 #4.1 Fusionar Dimensiones (Merge a main)
