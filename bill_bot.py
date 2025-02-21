@@ -6,6 +6,7 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 🟢 Guía en la descripción 🟢  
 """
 """Parte 4.1: ¿Como  Fusionar Dimensiones o ramas (Git Merge a main)?
+
 # git status:  Verifica en qué dimensión (rama) estás
 (Verificando que ya estas en la rama de cambios)
 # git add . = Guarda los cambios de la dimensión (rama) alternativa
