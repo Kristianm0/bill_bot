@@ -5,23 +5,8 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 
 🟢 Guía en la descripción 🟢  
 """
-"""Parte 4.1: ¿Como  Fusionar Dimensiones o ramas (Git Merge a main)?
-
-# git status:  Verifica en qué dimensión (rama) estás
-(Verificando que ya estas en la rama de cambios)
-# git add . = Guarda los cambios de la dimensión (rama) alternativa
-
-# git commit -m = "Descripción de cambios realizados"  
-
-# Git checkout main = Viaja de vuelta a la dimensión (rama) principal (`main`)
-
-# Git merge "nombre_rama" = Fusiona la dimensión alternativa con la línea principal (rama)
-
-# git merge "nombre_rama" -d = (Opcional) Destruir la dimensión alternativa
-
-#git push origin main = Sube todo a la dimension (rama) original
-
-
+"""Parte 5: ¿Como leer números en WhatsApp?
+ Vamos a limpiar números en Python para que sean válidos en WhatsApp Web, asegurando que tengan el prefijo correcto. 
 """
 
 ## -> Parte 2: Automatización de WhatsApp con Selenium ##->
@@ -47,8 +32,7 @@ import urllib.parse  # Modifica URLs sin errores
 
 # -> 3.1 Subir a un proyecto a Github (Hechos en consola)
 
-#📌
-# -> 4: Configuracion Navegador 🍕
+# -> 4: Configuracion Navegador 
 #Funcion 
 # Ritual para invocar el navegador
 def portal_dimensional():
@@ -63,10 +47,25 @@ def portal_dimensional():
     # 🔥 Finalmente, abrimos el portal (el navegador) con las configuraciones establecidas
     return webdriver.Chrome(service=servicio, options=opciones)  
   
-
-
 #4.1 Fusionar Dimensiones (Merge a main)
 
+#Rama de 
+# 📌 5: Leer numeros whatsApp
+#Funcion - Formato compatible con WA Web
+def corregir_numero(numero):
+    numero = "".join(filter(str.isdigit, numero))
+    if len(numero) == 10 and not numero.startswith("57"):
+        numero = "57" + numero
+    if not numero.startswith("+"):
+        numero = "+" + numero
+    return numero
+ 
+#Probamos
+print(corregir_numero("3204587777")) #E sin 57
+print(corregir_numero("+571234567890")) 
+print(corregir_numero("31245876e00")) #letra
 
-#Archivo main sin funcion
+
+
+
 
