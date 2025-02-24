@@ -60,12 +60,6 @@ def corregir_numero(numero):
         numero = "+" + numero
     return numero
  
-#Probamos
-print(corregir_numero("3204587777")) #E sin 57
-print(corregir_numero("+571234567890")) 
-print(corregir_numero("31245876e00")) #letra
-
-
 
 
 
