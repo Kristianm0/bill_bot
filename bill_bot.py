@@ -60,6 +60,32 @@ def corregir_numero(numero):
         numero = "+" + numero
     return numero
  
+# 📌 6: Envio de Mensajes a WhatsApp
+def invocar_mensaje(driver, numero, mensaje):
+    try: 
+        # Codificamos el mensaje para que WhatsApp lo entienda
+        mensaje_codificado = urllib.parse.quote(mensaje)
+        url = f"https://web.whatsapp.com/send?phone={numero}&text={mensaje_codificado}"
+        print(f"Abriendo conexión con: {numero}")
+        driver.get(url)
 
+        # Esperamos hasta 60 segundos para que cargue el botón de enviar
+        espera = WebDriverWait(driver, 60)
+        boton_svg = espera.until(EC.presence_of_element_located((By.XPATH, "//span[@data-icon='send']")))
+        boton_enviar = boton_svg.find_element(By.XPATH, ".//..")  # Obtenemos el botón real
+
+        print("Usando magia oscura...")
+        time.sleep(3)  # Esperamos un poco para que todo se cargue bien
+
+        print("Lanzando mensaje al vacío...")
+        driver.execute_script("arguments[0].click();", boton_enviar)  # Hacemos clic en el botón de enviar
+
+        print("Esperando confirmación del más allá...")
+        time.sleep(3)  # Damos tiempo para que el mensaje se envíe correctamente
+
+        return True, "🟢 Mensaje enviado a otra dimensión"
+    except Exception as e: 
+        print(f"🔥 ¡Algo salió mal en el ritual! {str(e)}")
+        return False, f"❌ Error dimensional: {str(e)}"
 
 
