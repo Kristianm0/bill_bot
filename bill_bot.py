@@ -5,8 +5,8 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 
 🟢 Guía en la descripción 🟢  
 """
-"""Parte 5: ¿Como leer números en WhatsApp?
- Vamos a limpiar números en Python para que sean válidos en WhatsApp Web, asegurando que tengan el prefijo correcto. 
+"""Parte 7: ¿Como inicar el bot?
+Vamos a crear una función en Python para enviar mensajes por WhatsApp utilizando Selenium. Especificando contacto, mensaje y mas.
 """
 
 ## -> Parte 2: Automatización de WhatsApp con Selenium ##->
@@ -50,7 +50,7 @@ def portal_dimensional():
 #4.1 Fusionar Dimensiones (Merge a main)
 
 #Rama de 
-# 📌 5: Leer numeros whatsApp
+#Leer numeros whatsApp
 #Funcion - Formato compatible con WA Web
 def corregir_numero(numero):
     numero = "".join(filter(str.isdigit, numero))
@@ -60,32 +60,29 @@ def corregir_numero(numero):
         numero = "+" + numero
     return numero
  
-# 📌 6: Envio de Mensajes a WhatsApp
+# 6: Envio de Mensajes a WhatsApp
 def invocar_mensaje(driver, numero, mensaje):
-    try: 
-        # Codificamos el mensaje para que WhatsApp lo entienda
+    try:
         mensaje_codificado = urllib.parse.quote(mensaje)
         url = f"https://web.whatsapp.com/send?phone={numero}&text={mensaje_codificado}"
-        print(f"Abriendo conexión con: {numero}")
+        print(f"📡 Abriendo conexión con: {numero}")
         driver.get(url)
 
-        # Esperamos hasta 60 segundos para que cargue el botón de enviar
         espera = WebDriverWait(driver, 60)
-        boton_svg = espera.until(EC.presence_of_element_located((By.XPATH, "//span[@data-icon='send']")))
-        boton_enviar = boton_svg.find_element(By.XPATH, ".//..")  # Obtenemos el botón real
+        boton_enviar = espera.until(EC.element_to_be_clickable((By.XPATH, "//button[@aria-label='Enviar']")))
 
-        print("Usando magia oscura...")
-        time.sleep(3)  # Esperamos un poco para que todo se cargue bien
+        print("🔮 Usando magia oscura...")
+        time.sleep(3)
+        print("📨 Lanzando mensaje al vacío...")
+        boton_enviar.click()
 
-        print("Lanzando mensaje al vacío...")
-        driver.execute_script("arguments[0].click();", boton_enviar)  # Hacemos clic en el botón de enviar
+        print("📜 Esperando confirmación del más allá...")
+        time.sleep(3)
 
-        print("Esperando confirmación del más allá...")
-        time.sleep(3)  # Damos tiempo para que el mensaje se envíe correctamente
-
-        return True, "🟢 Mensaje enviado a otra dimensión"
-    except Exception as e: 
+        return True, "✅ Mensaje enviado a otra dimensión"
+    except Exception as e:
         print(f"🔥 ¡Algo salió mal en el ritual! {str(e)}")
         return False, f"❌ Error dimensional: {str(e)}"
+
 
 
