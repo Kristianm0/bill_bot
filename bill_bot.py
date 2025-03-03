@@ -5,7 +5,9 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 
 🟢 Guía en la descripción 🟢  
 """
-
+"""Parte 7: ¿Como inicar el bot?
+Vamos a crear una función en Python para enviar mensajes por WhatsApp utilizando Selenium. Especificando contacto, mensaje y mas. Osea, vamos a terminar el bot.
+"""
 
 ## -> Parte 2: Automatización de WhatsApp con Selenium ##->
 from selenium import webdriver
@@ -82,5 +84,41 @@ def invocar_mensaje(driver, numero, mensaje):
         print(f"🔥 ¡Algo salió mal en el ritual! {str(e)}")
         return False, f"❌ Error dimensional: {str(e)}"
 
+#📌 7: Inicia la operación cósmica
+def invocar_magia():
+    contactos = ["3206491370", "3101111111"]
+    mensaje = "Hola Humano, soy Bill Bot creado por KMC"
 
+    print("🔮✨ Abriendo el portal del caos...")
+    driver = portal_dimensional()
 
+    try:
+        print("🌌 Ingresando a la red astral de WhatsApp...")
+        driver.get("https://web.whatsapp.com/")
+
+        print("\n⚠️ IMPORTANTE ⚠️")
+        print("1. Escanea el código QR con WhatsApp Web")
+        input("2. Presiona Enter cuando estés listo...")
+
+        for i, numero in enumerate(contactos, 1):
+            numero_correcto = corregir_numero(numero)
+            print(f"\n🔹 Contactando a {numero_correcto}") 
+
+            exito, mensaje_retorno = invocar_mensaje(driver, numero_correcto, mensaje)
+
+            print(f"{mensaje_retorno}")
+
+            time.sleep(3)
+
+    except Exception as e: 
+        print(f"🔥 ¡Hay un error! {str(e)}") 
+    
+    finally:
+        print("\n🔚 Ritual finalizado. Presiona Enter para cerrar el portal...")
+        input()
+        # Cerramos el navegador
+        driver.quit()
+    
+# Ejecutamos la función 
+if __name__ == "__main__":
+    invocar_magia()
