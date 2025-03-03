@@ -5,9 +5,7 @@ Un bot en Python que manda mensajes de WhatsApp automáticamente, como si Bill h
 
 🟢 Guía en la descripción 🟢  
 """
-"""Parte 7: ¿Como inicar el bot?
-Vamos a crear una función en Python para enviar mensajes por WhatsApp utilizando Selenium. Especificando contacto, mensaje y mas.
-"""
+
 
 ## -> Parte 2: Automatización de WhatsApp con Selenium ##->
 from selenium import webdriver
